@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="145" id="KGk-i7-Jjw" customClass="FuLiContentViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DxJ-1D-mx2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="143"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    </webView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="DxJ-1D-mx2" secondAttribute="bottom" constant="1" id="10h-wF-pHx"/>
+                    <constraint firstItem="DxJ-1D-mx2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FCK-U2-T5q"/>
+                    <constraint firstAttribute="trailing" secondItem="DxJ-1D-mx2" secondAttribute="trailing" id="VJA-1P-s3H"/>
+                    <constraint firstItem="DxJ-1D-mx2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kZq-HK-gu9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="web_content" destination="DxJ-1D-mx2" id="5fM-JE-xRe"/>
+            </connections>
+            <point key="canvasLocation" x="373" y="341.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--我的私信-->
+        <scene sceneID="QkQ-Mv-hUc">
+            <objects>
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="m6F-Lx-0Gu" customClass="ChatListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="d97-fG-BxH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="m6F-Lx-0Gu" id="6Yo-qz-sU8"/>
+                            <outlet property="delegate" destination="m6F-Lx-0Gu" id="Hib-nX-ItH"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="我的私信" id="fPF-9C-6BL">
+                        <barButtonItem key="leftBarButtonItem" image="appui_fanhui_" id="jId-pK-ggI">
+                            <inset key="imageInsets" minX="-10" minY="-2" maxX="0.0" maxY="0.0"/>
+                            <connections>
+                                <action selector="dissChart:" destination="m6F-Lx-0Gu" id="gp9-lc-0NY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ztr-dP-mjj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262.39999999999998" y="525.39999999999998"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LXL-n7-NBo">
+            <objects>
+                <navigationController storyboardIdentifier="ChatList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zlI-jx-pRG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LFa-CJ-tnl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="m6F-Lx-0Gu" kind="relationship" relationship="rootViewController" id="7b5-Vk-Mih"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wok-4v-a9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174.93333333333334" y="525.39999999999998"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appui_fanhui_" width="47" height="47"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+    <color key="tintColor" red="0.77647058823529413" green="0.15686274509803921" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>

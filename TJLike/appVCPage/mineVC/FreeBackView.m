@@ -1,0 +1,77 @@
+//
+//  FreeBackView.m
+//  TJLike
+//
+//  Created by imac-1 on 2016/12/5.
+//  Copyright © 2016年 IPTV_MAC. All rights reserved.
+//
+
+#import "FreeBackView.h"
+
+@implementation FreeBackView
+@synthesize mDelegate,onGoComment,OnSendClick;
+- (id)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.userInteractionEnabled = YES;
+        UILabel *mlbLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 8, SCREEN_WIDTH-40, 28)];
+        mlbLabel.userInteractionEnabled = YES;
+        mlbLabel.textColor = [UIColor colorWithWhite:0.16 alpha:1];
+        mlbLabel.backgroundColor = [UIColor whiteColor];
+        mlbLabel.font = [UIFont systemFontOfSize:13];
+        mlbLabel.layer.masksToBounds = YES;
+        mlbLabel.layer.cornerRadius = 5;
+        mlbLabel.text = @" 输入反馈意见";
+        [self addSubview:mlbLabel];
+        
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame  =mlbLabel.bounds;
+        btn.backgroundColor = [UIColor clearColor];
+        
+        [btn addTarget:self action:@selector(CommentClick) forControlEvents:UIControlEventTouchUpInside];
+        [mlbLabel addSubview:btn];
+        
+//        _rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//        _rightBtn.frame = CGRectMake(SCREEN_WIDTH-10-115*0.5, 8,115*0.5 , 28);
+//        _rightBtn.backgroundColor = [UIColor clearColor];
+//        // [_rightBtn setBackgroundImage:[UIImage imageNamed:@"news_bottom_15_@2x.png"] forState:UIControlStateNormal];
+//        // _rightBtn.layer.borderWidth = 0.3;
+//        // _rightBtn.layer.borderColor = [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0].CGColor;
+//        _rightBtn.layer.cornerRadius = 0.3;
+//        _rightBtn.layer.borderWidth =1;
+//        _rightBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//        [_rightBtn addTarget:self action:@selector(BtnClick:) forControlEvents:UIControlEventTouchUpInside];
+//        _rightBtn.selected = NO;
+//        [self addSubview:_rightBtn];
+//        
+//        _commentNum = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 115*0.5, 28)];
+//        _commentNum.backgroundColor = [UIColor clearColor];
+//        _commentNum.textAlignment = NSTextAlignmentCenter;
+//        _commentNum.font = [UIFont systemFontOfSize:13];
+//        _commentNum.textColor =  [UIColor lightGrayColor];
+//        [_rightBtn addSubview:_commentNum];
+//        
+//        _showContent = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 115*0.5, 28)];
+//        _showContent.backgroundColor = [UIColor clearColor];
+//        _showContent.textAlignment = NSTextAlignmentCenter;
+//        _showContent.font = [UIFont systemFontOfSize:13];
+//        _showContent.textColor =  [UIColor lightGrayColor];
+//        _showContent.text = @"原文";
+//        _showContent.hidden = YES;
+//        [_rightBtn addSubview:_showContent];
+        
+    }
+    return self;
+}
+- (void)setComment:(int)num{
+    _commentNum.text = [NSString stringWithFormat:@"%d评",num];
+}
+
+- (void)BtnClick:(UIButton *)sender{
+    SafePerformSelector([mDelegate performSelector:onGoComment withObject:sender]);
+    
+}
+- (void)CommentClick{
+    SafePerformSelector([mDelegate performSelector:OnSendClick]);
+}
+@end

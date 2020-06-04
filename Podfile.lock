@@ -1,0 +1,72 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AVOSCloud (3.4.0)
+  - AVOSCloudIM (3.4.0):
+    - AVOSCloud (= 3.4.0)
+    - AVOSCloudIM/_ARC (= 3.4.0)
+    - AVOSCloudIM/_NOARC (= 3.4.0)
+  - AVOSCloudIM/_ARC (3.4.0):
+    - AVOSCloud (= 3.4.0)
+    - AVOSCloudIM/_NOARC (= 3.4.0)
+  - AVOSCloudIM/_NOARC (3.4.0):
+    - AVOSCloud (= 3.4.0)
+  - DateTools (1.5.0)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - JSBadgeView (1.4.1)
+  - LeanChatLib (0.3.5):
+    - AVOSCloud
+    - AVOSCloudIM
+    - DateTools (= 1.5.0)
+    - FMDB (= 2.5)
+    - JSBadgeView (= 1.4.1)
+    - SDWebImage
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - AVOSCloud
+  - AVOSCloudIM
+  - LeanChatLib
+  - ReactiveCocoa
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AVOSCloud: 771c8d77bc9b9f2cc8ac2eb4b58eaf368337ac95
+  AVOSCloudIM: 288597efc0cff96620fc380ea146ccf89a8a8d48
+  DateTools: b93a2c2017747329c6077c7d7e8a75106e23d0d7
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  JSBadgeView: 3861ddee41094284d9468e6d0af5107f703aaac5
+  LeanChatLib: 9a5ed59b2b7224a0f0ea9dbb94c83e2fde0fe5d1
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+
+PODFILE CHECKSUM: 8aab539a0c05ab0fccfce93958b925d3389c1b40
+
+COCOAPODS: 1.0.1
